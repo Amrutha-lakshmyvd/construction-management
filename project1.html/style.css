@@ -1,0 +1,117 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+.bg {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Blurred background image */
+.bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("pic2.jpg") no-repeat center/cover;
+    filter: blur(10px);
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Dark overlay */
+.bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 2;
+}
+
+/* Glass Card */
+.glass-box {
+    width: 360px;
+    padding: 25px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+/* Title */
+.glass-box h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Roles */
+.roles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.role {
+    width: 95px;
+    padding: 12px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.role i {
+    font-size: 30px;
+}
+
+.role p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Hover & active */
+.role:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.role.active {
+    background: rgba(0,180,216,0.7);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #00b4d8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0077b6;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Construction Management Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg">
+
+<div class="glass-box">
+    <h2>Login</h2>
+
+    <!-- Role Selection -->
+    <div class="roles">
+        <div class="role" onclick="selectRole(this,'admin')">
+            <i class="fa-solid fa-user-shield"></i>
+            <p>Admin</p>
+        </div>
+
+        <div class="role" onclick="selectRole(this,'owner')">
+            <i class="fa-solid fa-building"></i>
+            <p>Owner</p>
+        </div>
+
+        <div class="role" onclick="selectRole(this,'engineer')">
+            <i class="fa-solid fa-helmet-safety"></i>
+            <p>Engineer</p>
+        </div>
+    </div>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
